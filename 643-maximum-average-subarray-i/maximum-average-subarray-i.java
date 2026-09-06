@@ -8,11 +8,9 @@ class Solution {
         double avg ;
         for(int j =0; j<nums.length-k; j++){
             sum = sum - nums[j]+nums[j+k];
-            avg = sum/k;
-            if(avg>Maxavg){
-                Maxavg = avg;
+            Maxavg = Math.max(Maxavg, sum/k);
             }
-        }
+        
         return Maxavg;
     }
 }
