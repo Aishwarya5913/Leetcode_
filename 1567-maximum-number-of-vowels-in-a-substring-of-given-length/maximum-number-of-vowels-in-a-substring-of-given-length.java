@@ -3,17 +3,22 @@ class Solution {
         int c = 0;
         int n = s.length();
         for(int i =0; i<k; i++){
-            if(s.charAt(i)=='a'||s.charAt(i)=='e'||s.charAt(i)=='i'||s.charAt(i)=='o'||s.charAt(i)=='u')
+            if(isVowel(s.charAt(i)))
                 c++;
         }   int max = c;
         for(int i =0; i<n-k; i++){
-            if(s.charAt(i)=='a'||s.charAt(i)=='e'||s.charAt(i)=='i'||s.charAt(i)=='o'||s.charAt(i)=='u')
+            if(isVowel(s.charAt(i)))
                 c--;
-            if(s.charAt(k+i)=='a'||s.charAt(k+i)=='e'||s.charAt(k+i)=='i'||s.charAt(k+i)=='o'||s.charAt(k+i)=='u')
+            if(isVowel(s.charAt(k+i)))
                 c++;
             if(c>max)
                 max = c;
         }
         return max;
     }
+    private boolean isVowel(char letter)
+    {
+        return letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u';
+    }
+    
 }
