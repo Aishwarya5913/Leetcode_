@@ -7,7 +7,7 @@ class Solution {
         if(n!=1 && nums[n-1]!=nums[n-2])
             x = nums[n-1];
         else
-            x = nums[0];
+         {   x = nums[0];
     
         for(int i =0;i<n-2;i=i+2)
         {
@@ -16,6 +16,7 @@ class Solution {
                 break;
             }
         }
+         }
             return x;
 
     }
