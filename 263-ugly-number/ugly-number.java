@@ -1,7 +1,7 @@
 class Solution {
     public boolean isUgly(int n) {
         boolean result = true; int num = n;
-        if(num == 0 )
+        if(num <= 0 )
             return false;
         else{
         
